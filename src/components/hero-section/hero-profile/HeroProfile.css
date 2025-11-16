@@ -1,0 +1,107 @@
+
+:root {
+    /* first position*/
+    --pos1-right: 150px;
+    --pos1-bottom: 0px;
+    --pos1-index: 0;
+
+    /* second position */
+    --pos2-right: 205px;
+    --pos2-bottom: 90px;
+    --pos2-index: 1;
+
+    /* third position */
+    --pos3-right: 99px;
+    --pos3-bottom: 93px;
+    --pos3-index: 4;
+}
+
+
+
+section.hero-section div.hero-photos {
+    width: 35%; /*  x 275 */
+    height: 275px;
+    position: relative;
+    /* background-color: lightgray; */
+}
+
+section.hero-section div.hero-photos img.professional{
+    width: 150px;
+    height: auto;
+    border-radius: 100%;
+    position: absolute;
+    /* right: var(--pos1-right);
+    bottom: var(--pos1-bottom);
+    z-index: var(--pos1-index); */
+    animation: photopath1 9s linear infinite;
+}
+
+section.hero-section div.hero-photos img.casual{
+    width: 150px;
+    height: auto;
+    border-radius: 100%;
+    position: absolute;
+    animation: photopath1 9s linear infinite;
+    /* right: var(--pos2-right);
+    bottom: var(--pos2-bottom);
+    z-index: var(--pos2-index); */
+    animation-delay: -3s;
+}
+
+section.hero-section div.hero-photos img.sporty{
+    width: 150px;
+    height: auto;
+    border-radius: 100%;
+    position: absolute;
+    animation: photopath1 9s linear infinite;
+    animation-delay: -6s;
+    /* right: var(--pos1-right);
+    bottom: var(--pos1-bottom);
+    z-index: var(--pos1-index); */
+}
+
+section.hero-section div.hero-photos img.background{
+    width: 550px;
+    height: auto;
+    position: absolute;
+    bottom: -75px;
+    right: -40px;
+    z-index: -1;
+}
+
+
+@keyframes photopath1 {
+    0% {
+        right: var(--pos1-right);
+        bottom: var(--pos1-bottom);
+        z-index: var(--pos1-index);
+        scale: 0.9;
+        opacity: 0.8;
+    }
+    25% {
+        opacity: 1;
+    }
+    33% {
+        right: var(--pos2-right);
+        bottom: var(--pos2-bottom);
+        z-index: var(--pos2-index);
+        opacity: 1;      
+    }
+    66% {
+        right: var(--pos3-right);
+        bottom: var(--pos3-bottom);
+        z-index: var(--pos3-index);
+        scale: 1.2;
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        right: var(--pos1-right);
+        bottom: var(--pos1-bottom);
+        z-index: var(--pos1-index);
+        scale: 0.9;
+        opacity: 0.8;
+    }
+}

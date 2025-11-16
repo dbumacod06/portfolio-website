@@ -1,0 +1,99 @@
+div.testimonial-card {
+    width: 90%;
+    height: 385px;
+    background-color: rgb(213, 155, 104, .2);
+    position: relative;
+    margin-top: 100px;
+    border-radius: 15px;
+    padding-top: 85px;
+}
+
+img.colleague-photo {
+    width: 150px;
+    height: auto;
+    border-radius: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.colleague-info {
+    padding: 0px 20px 20px 20px;
+}
+
+div.colleage-header {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+div.colleage-header h3{
+    margin: 0px;
+}
+
+div.colleague-info h4.colleague-relationship {
+    margin: 0px;
+}
+
+
+div.colleague-info p{
+    text-align: justify;
+    line-height: 1.25;
+    color: #333d42;
+}
+
+
+
+
+/* .swiper-container .swiper-slide:not(.swiper-slide-active) { */
+    /* transform: scale(0.8);  */
+    /* opacity: 0.7;  */
+/* } */
+
+.swiper-container .swiper-button-prev,
+.swiper-container .swiper-button-next {
+    opacity: 0.5;
+    color:rgb(62, 62, 62);
+    width: 50px;
+    height: 100px;
+    transform: translateY(-30%);
+    position: absolute;
+    right: -100px;
+}
+
+.swiper-container .swiper-button-prev:hover,
+.swiper-container .swiper-button-next:hover {
+    opacity: 0.9;
+}
+
+.swiper-container .swiper-button-prev {
+    padding: 100px 200px 100px 0px;
+}
+
+.swiper-container .swiper-button-next {
+    padding: 100px 0px 100px 200px;
+}
+
+/* .swiper-container .swiper-button-prev, */
+/* .swiper-container svg {
+    padding: 20px;
+} */
+
+
+/* .swiper-button-prev,
+.swiper-button-next {
+    color: #ff2f00;
+        background-color: rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-prev {
+    position: absolute;
+    left: 200px; 
+}
+
+.swiper-button-next {
+    position: absolute;
+    right: 20px; 
+} */

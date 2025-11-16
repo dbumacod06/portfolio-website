@@ -1,0 +1,39 @@
+div.testimonial-container {
+    margin: auto;
+    position: relative;
+    width: 100%;
+}
+
+.swiper-container .swiper-slide {
+    /* Set the slide width to less than 100%. For example, 70% or 300px. */
+    width: 45%; 
+    height: 800px; 
+}
+
+.slider-controler button {
+    position: absolute;
+    bottom: 200px;
+    border: none;
+    /* background-color: transparent; */
+    border-radius: 50%;
+    z-index: 11;
+}
+
+.slider-controler button:hover {
+    cursor: pointer;
+    background-color: gray;
+    scale: 1.5;
+
+}
+
+.slider-controler .btn-prev {
+    left: 40%
+}
+
+.slider-controler .btn-next {
+    right: 45%
+}
+
+div.swiper-pagination span{
+    transform: translateX(-30px);
+}

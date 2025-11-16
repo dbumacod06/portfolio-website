@@ -1,0 +1,142 @@
+section.hero-section div.hero-content {
+    width: 65%;
+    position: relative;
+}
+
+section.hero-section div.hero-content p.intro {
+    margin: 10px 0px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+section.hero-section div.hero-content p.full-name{
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0px;
+}
+section.hero-section div.hero-content p.one-liner{
+    font-size: 1.25rem;
+    color: #717171;
+    max-width: 600px
+}
+
+
+section.hero-section div.hero-content div.hero-details p.content{
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    margin: auto;
+    text-align: justify;
+    line-height: 1.5em;
+    font-size: 1.15em;
+    max-width: 600px;
+}
+
+
+section.hero-section div.hero-connect button {
+    margin: 20px 10px 0px 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(213, 155, 104);
+    background-color: transparent;
+}
+
+section.hero-section div.hero-connect button:hover {
+    background-color: rgba(213, 155, 104, 0.704);
+    border-color: rgba(213, 155, 104, 0.704);
+    color:white;
+    cursor: pointer;
+}
+
+section.hero-section div.hero-connect {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+section.hero-section div.hero-connect img{
+    height: 1rem;
+    width: 1rem;
+}
+
+div.toggling-content {
+    position: relative;
+}
+
+button.pin-content {
+    position: absolute;
+    top: 0px;
+    left: 580px;
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 0px;
+}
+
+button.pin-content:hover {
+    border: 1px solid;
+    border-color: black;
+    transform: translateX(-5px);
+}
+
+
+button.pin-content img{
+    height: 20px;
+    width: 20px;
+}
+
+button.pin-content:hover img {
+    height: 25px;
+    width: 25px;
+}
+
+
+div.toggling-content .hide-content{
+    visibility: hidden;
+}
+
+div.toggling-content .show-content{
+    visibility: visible;
+}
+
+ .locked .toggling-content {
+    pointer-events: none;
+}
+
+.locked button.pin-content {
+    pointer-events: auto;
+    border-color: black; 
+    border: 1px solid;
+    background-color: rgb(213, 155, 104, .5);
+}
+.locked button.pin-content img {
+    height: 25px;
+    width: 25px;
+}
+
+#downloadResume {
+    display: None;
+}
+
+p.copy-message {
+    position: absolute;
+    bottom: 25px;
+    right: 170px;
+    background-color: hsla(0, 0%, 57%, 0.351);
+    border-radius: 5px;
+    color: rgb(88, 88, 88);
+    opacity: 0;
+    
+}
+
+p.show {
+    opacity: 1;
+    animation: fleeting-msg 0.8s ease-in;
+}
+
+@keyframes fleeting-msg {
+    0% { opacity: 0.2; transform: translate(0,0); }
+    100% { opacity: 1.0; transform: translate(5px, -5px);}
+}

@@ -1,0 +1,12 @@
+body {
+    background-color: #FCFBF4;
+    color: black;
+    padding-top: 50px;
+    margin-bottom: 200px;
+}
+
+div.container {
+    align-items: center;
+    margin: 0 auto;
+    width: 1100px;
+}

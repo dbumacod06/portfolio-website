@@ -1,0 +1,89 @@
+section.experiences-section {
+    width: 85%;
+    margin: 20px auto 0px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+
+section.experiences-section div.tab-selector{
+    width: 70%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    margin: 0 auto 30px auto;
+}
+section.experiences-section div.tab-container{
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+section.experiences-section div.tab-selector button{
+    background-color: transparent;
+    /* border: 1px solid;
+    border-color: red; */
+    border: none;
+    width: 30%;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+}
+
+
+section.experiences-section div.tab-selector button img {
+    position: absolute;
+    height: 50%;
+    width: auto;
+    top: 5%;
+    left: 37%;
+}
+
+section.experiences-section div.tab-selector button.CHG-btn img {
+    height: 25%;
+    width: auto;
+    top: 30%;
+    left: 27%;
+}
+
+section.experiences-section div.tab-selector button.active {
+    background-color: rgba(32, 32, 46, 0.373);
+    background: linear-gradient(to top right, rgba(32, 32, 46, 0.116),rgba(32, 32, 46, 0.014));
+    opacity: 1;
+    animation: init-btn-active 0.5s ease-in ;
+}
+
+@keyframes init-btn-active {
+    0% { opacity: 0 }
+    100% { opacity: 1}
+
+}
+
+section.experiences-section div.tab-selector button:not(.active) {
+    opacity: 0.75;
+    transform: scale(0.75);
+    animation: init-btn-inactive 0.5s ease-in;
+}
+
+@keyframes init-btn-inactive {
+    0% { opacity: 0; }
+    100% { opacity: 0.75;}
+
+}
+
+
+/* .fade {
+  opacity: 0;
+} */
+
+
+section.experiences-section div.tab-selector button p {
+    color: black;
+    transform: translateY(30px);
+}
+
+
+
