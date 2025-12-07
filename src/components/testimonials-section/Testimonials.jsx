@@ -64,7 +64,7 @@ function Testimonials() {
         <Swiper
             effect={"coverflow"}
             grabCursor={false}
-            allowTouchMove={false}
+            allowTouchMove={true}
             centeredSlides={false}
             slidesPerGroup={2}
             slidesPerView={2}
