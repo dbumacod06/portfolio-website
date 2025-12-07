@@ -3,7 +3,7 @@ import "./Experiences.css";
 import ArchLogo from "/logos/companies/company-arch.png";
 import GlobeLogo from "/logos/companies/company-globe.png";
 import CHCLogo from "/logos/companies/company-chg.png";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 
 // to add: switch to tabbed content
@@ -30,28 +30,24 @@ function Experiences() {
 
         }
     ])
+
+    const [yTranslations, setYTranslations] = useState([0, 363, 1057])
+    const archRef = useRef(null);
+    const globeRef = useRef(null);
+    const chgRef = useRef(null);
+    
+    useEffect(() => {
+        console.log(archRef.current)
+        archRef.current.style.transform = `translateY(${yTranslations[0]}px)`;
+        globeRef.current.style.transform = `translateY(${yTranslations[1]}px)`;
+        chgRef.current.style.transform = `translateY(${yTranslations[2]}px)`;
+    },[yTranslations])
+
+
+
+
     const handleTabClick = (e, tabName, newMididx) => {
         e.preventDefault()
-
-        // setFade(true);
-
-        // // After animation delay, swap order
-        // setTimeout(() => {
-        //     setBtnOrder(prevOrder=>{
-        //         const newBtnOrder = [...prevOrder]
-        //         const currMidValue =  prevOrder[1]
-
-        //         newBtnOrder[1] = prevOrder[newMididx]
-        //         newBtnOrder[newMididx] = currMidValue
-        //         return newBtnOrder
-        //     });
-        //     setActiveTab(tabName)
-        //     setFade(false);
-        //     }, 500); // match half the CSS transition
-        // };
-
-
-
 
         setBtnOrder(prevOrder=>{
             const newBtnOrder = [...prevOrder]
@@ -61,7 +57,19 @@ function Experiences() {
             newBtnOrder[newMididx] = currMidValue
             return newBtnOrder
         });
+
         setActiveTab(tabName)
+        switch(tabName){
+            case "Arch":
+                setYTranslations([0, 363, 1057])
+                break;
+            case "Globe":
+                setYTranslations([694, 0, 1057])
+                break;
+            case "CHG":
+                setYTranslations([168, 531, 0])
+                break;
+        }
     }
     return (
         <section className="experiences-section">
@@ -74,6 +82,7 @@ function Experiences() {
                                 ${activeTab === companyState ? "active" : ""}
                                 ${companyState}-btn
                             `}
+                            disabled={activeTab === companyState}
                             onClick={e=>handleTabClick(e, companyState, idx)}
                             key={`${companyState}-btn`}
                         >
@@ -86,6 +95,7 @@ function Experiences() {
 
             <div className="tab-container">
                 <Experience 
+                    ref={archRef}
                     company="Arch Global Services"
                     jobDescriptions={[
                         {
@@ -101,6 +111,7 @@ function Experiences() {
                     ]}
                 />
                 <Experience 
+                    ref={globeRef}
                     company="Globe Group"
                     jobDescriptions={[
                         {
@@ -127,6 +138,7 @@ function Experiences() {
                     ]}
                 />
                 <Experience 
+                    ref={chgRef}
                     company="Change Healthcare"
                     jobDescriptions={[
                         {

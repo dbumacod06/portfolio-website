@@ -1,8 +1,8 @@
-
+import { forwardRef } from "react"
 import "./Experience.css"
 
 
-function Experience({className = "", company, jobDescriptions}) { 
+function Experience({className = "", company, jobDescriptions}, ref) { 
   /*
     company: string - The name of the company
     jobTitle: string - The title of the job position
@@ -17,7 +17,7 @@ function Experience({className = "", company, jobDescriptions}) {
   // };
 
   return (
-    <section className={`job-experience ${company} ${className}`}>
+    <section className={`job-experience ${company} ${className}`} ref={ref}>
       <h3 className="job-experience header">{company}</h3>
       {jobDescriptions.map((jobDescription) => {
         const {jobTitle, startDate, endDate, description, tasks} = jobDescription
@@ -38,4 +38,4 @@ function Experience({className = "", company, jobDescriptions}) {
     )
 }
 
-export default Experience;
+export default forwardRef(Experience);
